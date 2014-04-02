@@ -1,0 +1,158 @@
+<!DOCTYPE html> 
+<html>
+
+  <!-- Hej!
+
+  Tycker du också att image maps är ett ofint sätt att fixa länkar i kod? 
+  Kan du uppskatta, men avsky, att positionera element med relative minus pixel hacks?
+
+  Då får du gärna hjälpa oss med hemsidan!
+
+  Pull Requests på https://github.com/underscorenygren/dags_att_rosta välkommnas.
+
+  -->
+
+  <head>
+    <link rel="stylesheet" href="reset.css">
+    <title>Rösta som utlandssvensk</title>
+    <meta charset="UTF-8">
+
+    <style type="text/css">
+      div {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      #front {
+        height: 810px;
+      }
+      #front, #intro, #punkt5 {
+        background-color: #F91A88;
+      }
+      #punkt1, #punkt4 {
+        background-color: #FFFFFF;
+      }
+      #punkt2, #sista, #footer {
+        background-color: #020202;
+      }
+      #punkt3 {
+        background-color: #F8F537;
+      }
+
+      .section {
+        width: 1279;
+      }
+
+      #container {
+        text-align: center;
+        margin: auto;
+      }
+
+      #position {
+        border: 1px solid black;
+        color: red;
+        position: absolute;
+        top: 160px;
+        left: 795px;
+        width: 80px;
+        height: 28px;
+      }
+
+      img {
+        position: relative;
+      }
+
+      .fb-share-button {
+        top: -4px;
+      }
+
+      #social iframe {
+        position: relative;
+        top: -150px;
+      }
+
+      #footer {
+        text-align: left;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div id="fb-root"></div>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=490416454315282";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div id="container">
+
+      <div id="front" class="section">
+        <img src="/src/img/front.jpg" alt="Denna sida riktar sig till dig som är utomlandssvensk och vill rösta i det kommande valet">
+      </div>
+
+      <div id="intro" class="section">
+        <img src="/src/img/intro.jpg" usemap="#intromap" alt="Ar du utskriven kan du fortsätta till punkt 4">
+
+        <map name="intromap">
+          <area shape="rect" coords="748,160,848,198" href="#punkt1" alt="punkt1">
+          <area shape="rect" coords="697,325,767,345" href="#punkt4" alt="punkt4">
+        </map>
+      </div>
+
+      <div id="punkt1">
+        <img src="/src/img/1.jpg" usemap="#onemap" alt="Ladda ned blanketten fran skatteverket">
+        <map name="onemap">
+          <area shape="rect" coords="544,245,800,280" href="http://www.skatteverket.se/privat/blanketterbroschyrer/blanketter/info/7842.4.19b9f599116a9e8ef36800024543.html" alt="skatteverkets blankett">
+        </map>
+      </div>
+
+      <div id="punkt2" class="section">
+        <img src="/src/img/2.jpg"  alt="Skicka in blanketten med din nuvarande address">
+      </div>
+
+      <div id="punkt3" class="section">
+        <img src="/src/img/3.jpg" alt="Vänta. Passa på att göra något kul och bra för klimatet">
+      </div>
+
+      <div id="punkt4" class="section">
+        <img src="/src/img/4.jpg" usemap="#fourmap" alt="Besok ambassaden eller konsulatet där du bor när det är öppet för röstning">
+
+        <map name="fourmap">
+          <area shape="rect" coords="730,220,830,255" href="http://www.val.se/det_svenska_valsystemet/rostning/rosta_ambassad/" alt="lokala ambassaden">
+          <area shape="rect" coords="710,350,970,385" href="http://www.val.se/det_svenska_valsystemet/rostning/brevrosta/index.html" alt="brevrosta">
+        </map>
+      </div>
+
+      <div id="punkt5" class="section">
+        <img src="/src/img/5.jpg" alt="Fira att du använt din rösträtt">
+
+        <div id="social">
+          <div class="fb-share-button" data-href="http://dagsattrosta.com" data-type="button" data-width="62"></div>
+          <a href="https://twitter.com/share" class="twitter-share-button" data-lang="sv"
+            data-via="MPNewYork" data-url="http://dagsattrosta.com" data-text="Jag är redo för årets val, är du?" data-count="none">Tweet</a>
+        </div>
+      </div>
+
+      <div id="sista" class="section">
+        <img src="/src/img/sista.jpg" usemap="#lastmap" alt="Mer information finns på val.se">
+        <map name="lastmap">
+          <area shape="rect" coords="710,245,975,280" href="http://www.val.se/det_svenska_valsystemet/rostratt/utlandssvenskar/index.html" alt="Mer info">
+        </map>
+        <div id="footer">
+          <a href="http://new-york.medlem.mp.se/"><img src="/src/img/footer.jpg" alt="Skapad av MPNY"></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
